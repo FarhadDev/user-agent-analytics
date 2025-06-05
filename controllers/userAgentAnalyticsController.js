@@ -48,4 +48,8 @@ const getTestResponse = (req, res) => {
     }
 }
 
-module.exports = getTestResponse;
+const getAnalyticsView = (req, res) => {
+    res.sendFile(path.join(__dirname, '../public', 'analytics.html'));
+}
+
+module.exports = { getTestResponse, getAnalyticsView };
